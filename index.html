@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanguine — Connecting Every Drop to Every Life</title>
+<meta name="description" content="Sanguine is a smart blood donation portal linking donors, recipients, hospitals and blood banks in one place.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="emergency-bar">
+  <div class="container">
+    <span id="emergencyText">🚨 Checking saved requests…</span>
+    <a href="app.html#/request" class="btn btn-primary btn-sm">View requests</a>
+  </div>
+</div>
+<main id="main" tabindex="-1">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Blood Donation Portal — Front-End Demo</span>
+        <h1>Connecting every drop<br>to every life.</h1>
+        <p class="lead">A front-end demo of a blood-donation portal: browse sample donor profiles and blood banks, save blood requests, and join camps. All data is sample or local to this browser.</p>
+        <div class="hero-cta">
+          <a href="app.html#/signup" class="btn btn-primary">Become a Donor</a>
+          <a href="app.html#/request" class="btn btn-ghost">Request Blood</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b id="heroDonors">0</b><span>Donor profiles (sample + yours)</span></div>
+          <div class="stat"><b id="heroDonations">0</b><span>Donations logged</span></div>
+          <div class="stat"><b id="heroBanks">0</b><span>Sample blood banks</span></div>
+        </div>
+      </div>
+      <div class="drop-scene">
+        <svg viewBox="0 0 320 360" aria-hidden="true">
+          <defs><linearGradient id="heroDrop" x1="60" y1="20" x2="260" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#D90429"/><stop offset="1" stop-color="#8B0015"/></linearGradient></defs>
+          <circle cx="160" cy="190" r="140" fill="#F8F9FA"/>
+          <path class="floaty" d="M160 40C160 40 90 165 90 220C90 267 120 300 160 300C200 300 230 267 230 220C230 165 160 40 160 40Z" fill="url(#heroDrop)"/>
+          <path d="M132 220C132 238 145 252 160 252" stroke="rgba(255,255,255,0.55)" stroke-width="8" stroke-linecap="round" fill="none"/>
+        </svg>
+        <svg class="pulse-rule" viewBox="0 0 300 40" aria-hidden="true"><path class="line" d="M0 20H90L105 6L120 34L135 20H300" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="eyebrow">Right now</span><h2>The network at a glance</h2></div>
+      <div class="grid grid-4">
+        <div class="card stat-card reveal"><div class="num"><span id="glDonors">0</span></div><p>Donor profiles (sample + yours)</p></div>
+        <div class="card stat-card reveal"><div class="num"><span id="glRequests">0</span></div><p>Requests saved in this browser</p></div>
+        <div class="card stat-card reveal"><div class="num"><span id="glBanks">0</span></div><p>Sample blood banks</p></div>
+        <div class="card stat-card reveal"><div class="num"><span id="glCamps">0</span></div><p>Sample camps</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="flex justify-between items-center section-header" style="width:100%;max-width:none">
+        <div><span class="eyebrow">Sample data</span><h2 class="mb-0">Featured blood banks</h2></div>
+        <a href="bloodbanks.html" class="btn btn-ghost btn-sm">View all →</a>
+      </div>
+      <div id="featuredStatus"></div>
+      <div class="grid grid-3" id="featuredBanks"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="eyebrow">How it works</span><h2>From sign-up to saving a life</h2></div>
+      <div class="timeline">
+        <div class="timeline-step reveal"><div class="idx">01</div><h3>Register</h3><p class="muted mb-0">Create a donor profile with your blood group and city.</p></div>
+        <div class="timeline-step reveal"><div class="idx">02</div><h3>Get matched</h3><p class="muted mb-0">Your profile appears in the demo donor search by group, city and availability.</p></div>
+        <div class="timeline-step reveal"><div class="idx">03</div><h3>Confirm eligibility</h3><p class="muted mb-0">Check age, weight and health guidelines before you donate.</p></div>
+        <div class="timeline-step reveal"><div class="idx">04</div><h3>Donate</h3><p class="muted mb-0">Visit a camp or blood bank and complete your donation.</p></div>
+        <div class="timeline-step reveal"><div class="idx">05</div><h3>Track impact</h3><p class="muted mb-0">See your donation history and the lives you've touched.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header text-center" style="margin-inline:auto"><span class="eyebrow">Fictional sample stories</span><h2>Stories from the network</h2></div>
+      <div class="grid grid-3">
+        <div class="testimonial reveal"><p>"I got three donor calls within twenty minutes of posting a request for my father. That speed made all the difference."</p>
+          <div class="who"><div class="avatar">RK</div><div><strong>Ramesh Kumar</strong><div class="muted">Recipient's family</div></div></div></div>
+        <div class="testimonial reveal"><p>"Sanguine reminds me exactly when I'm eligible to donate again. I've never missed a cycle since joining."</p>
+          <div class="who"><div class="avatar">AS</div><div><strong>Aarav Sharma</strong><div class="muted">Regular donor</div></div></div></div>
+        <div class="testimonial reveal"><p>"Coordinating camps used to mean spreadsheets and phone trees. Now our sign-ups happen right on the platform."</p>
+          <div class="who"><div class="avatar">NR</div><div><strong>Neha Reddy</strong><div class="muted">Camp organizer</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band" style="max-width:900px">
+        <h2>Your one donation can support up to three lives.</h2>
+        <p style="max-width:50ch;margin-inline:auto">It takes ten minutes to register. It takes even less to check if someone nearby needs your blood group today.</p>
+        <div class="hero-cta" style="justify-content:center"><a href="app.html#/signup" class="btn btn-primary">Join as a Donor</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/home.js"></script>
+</body>
+</html>

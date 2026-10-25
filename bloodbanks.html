@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Banks — Sanguine</title>
+<meta name="description" content="Browse sample blood banks and the groups they stock.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Blood Banks</span>
+      <h1>Sample blood banks</h1>
+      <p class="lead" style="max-width:60ch">Fictional demo listings (names, numbers and available groups are sample data, not live stock).</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="filter-bar card" style="margin-bottom:1.5rem">
+        <div class="field"><label for="bq">Search</label><input id="bq" placeholder="Name or area"></div>
+        <div class="field"><label for="bg">Has blood group</label>
+          <select id="bg"><option value="">Any</option></select></div>
+      </div>
+      <div id="bankStatus"></div>
+      <div class="grid grid-2" id="bankList"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/bloodbanks.js"></script>
+</body>
+</html>

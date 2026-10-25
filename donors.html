@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find a Donor — Sanguine</title>
+<meta name="description" content="Search sample donor profiles by blood group, city and availability.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Find a Donor</span>
+      <h1>Search the donor network</h1>
+      <p class="lead" style="max-width:60ch">Filter by blood group, city and availability. Profiles marked Sample are fictional demo data, not real donors.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="filter-bar card">
+        <div class="field"><label for="filterGroup">Blood group</label>
+          <select id="filterGroup"><option value="">All groups</option></select></div>
+        <div class="field"><label for="filterCity">City</label>
+          <input id="filterCity" placeholder="e.g. Mohali"></div>
+        <div class="field field-checkbox"><div class="checkbox-row">
+          <input type="checkbox" id="filterAvailable"><label for="filterAvailable" style="margin:0">Available only</label></div></div>
+      </div>
+      <div id="donorStatus"></div>
+      <p class="muted" id="donorCount" aria-live="polite"></p>
+      <div class="grid grid-3" id="donorResults"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/donors.js"></script>
+</body>
+</html>

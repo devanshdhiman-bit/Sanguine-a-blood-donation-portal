@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eligibility — Sanguine</title>
+<meta name="description" content="Quick check of the general blood donation eligibility guidelines.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Eligibility</span>
+      <h1>Can you donate blood?</h1>
+      <p class="lead" style="max-width:60ch">General guidelines below — always follow your local blood bank's medical screening on the day.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="form-card" style="margin-bottom:2rem">
+        <h3>Quick eligibility check</h3>
+        <div class="form-row">
+          <div class="field"><label for="ea">Age</label><input id="ea" type="number" placeholder="e.g. 28"></div>
+          <div class="field"><label for="ew">Weight (kg)</label><input id="ew" type="number" placeholder="e.g. 60"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="ed">Days since last donation <span class="hint">(optional)</span></label><input id="ed" type="number" placeholder="e.g. 90"></div>
+          <div class="field field-checkbox"><div class="checkbox-row"><input type="checkbox" id="ewell" checked><label for="ewell" style="margin:0">I feel well today</label></div></div>
+        </div>
+        <div id="eligResult" role="status"></div>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal"><h3>Age</h3><p class="muted mb-0">Donors should typically be between 18 and 65 years old. First-time donors over 60 may need medical clearance.</p></div>
+        <div class="card reveal"><h3>Weight</h3><p class="muted mb-0">A minimum body weight of around 45–50 kg is generally required to safely donate a standard unit.</p></div>
+        <div class="card reveal"><h3>Health</h3><p class="muted mb-0">You should be free of fever, infection, or flu-like symptoms, and generally feeling well on donation day.</p></div>
+        <div class="card reveal"><h3>Medical conditions</h3><p class="muted mb-0">Certain conditions (e.g. uncontrolled hypertension, recent major surgery, certain medications) may mean a temporary or permanent deferral — the screening nurse will confirm.</p></div>
+        <div class="card reveal"><h3>Donation interval</h3><p class="muted mb-0">Whole-blood donors usually wait about 56 days (8 weeks) between donations; platelet donors may donate more frequently.</p></div>
+        <div class="card reveal"><h3>Lifestyle</h3><p class="muted mb-0">Get a good night's sleep, eat a meal beforehand, and stay well hydrated before donating.</p></div>
+      </div>
+      <div class="cta-band mt-lg" style="max-width:900px">
+        <h2>Ready when you are</h2><p>If the above sounds like you, register in under two minutes.</p>
+        <a href="donor.html" class="btn btn-primary">Register as a Donor</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/eligibility.js"></script>
+</body>
+</html>

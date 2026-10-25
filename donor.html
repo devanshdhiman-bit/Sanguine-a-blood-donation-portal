@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donor Registration — Sanguine</title>
+<meta name="description" content="Register as a sample blood donor, edit your profile and log donations.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container text-center">
+      <span class="eyebrow">Donor Registration</span>
+      <h1 id="donorTitle">Register as a blood donor</h1>
+      <p class="lead" style="max-width:52ch;margin-inline:auto">Takes about two minutes. Your details stay on this device via local storage for this demo.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <form class="form-card" id="donorForm" novalidate>
+        <div class="form-row">
+          <div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" placeholder="e.g. Aarav Sharma"><div class="error-msg"></div></div>
+          <div class="field"><label for="age">Age</label><input id="age" name="age" type="number" min="18" max="65" placeholder="18–65"><div class="error-msg"></div></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="gender">Gender</label><select id="gender" name="gender"><option>Female</option><option>Male</option><option>Other</option></select><div class="error-msg"></div></div>
+          <div class="field"><label for="weight">Weight (kg)</label><input id="weight" name="weight" type="number" min="45" max="200" placeholder="Minimum 45kg"><div class="error-msg"></div></div>
+        </div>
+        <div class="field">
+          <label id="bgLabel">Blood group</label>
+          <div class="bg-picker" role="radiogroup" aria-labelledby="bgLabel" id="bgPicker"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="10-digit mobile number"><div class="error-msg"></div></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com"><div class="error-msg"></div></div>
+        </div>
+        <div class="field"><label for="address">Address</label><input id="address" name="address" placeholder="House / street / area"><div class="error-msg"></div></div>
+        <div class="form-row">
+          <div class="field"><label for="city">City</label><input id="city" name="city" placeholder="e.g. Mohali"><div class="error-msg"></div></div>
+          <div class="field"><label for="lastDonation">Last donation date <span class="hint">(optional)</span></label><input id="lastDonation" name="lastDonation" type="date"><div class="error-msg"></div></div>
+        </div>
+        <div class="field">
+          <div class="checkbox-row" style="margin-bottom:var(--space-md)">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent" style="margin:0">I confirm the information above is accurate and I understand it is saved only in this browser (demo) — no one will be contacted.</label>
+          </div>
+          <div class="error-msg"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="donorSubmit">Complete Registration</button>
+      </form>
+      <div class="form-card mt-lg">
+        <h3>My donation history</h3>
+        <div id="historyBox"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/donor.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Sanguine</title>
+<meta name="description" content="Contact the Sanguine demo team. Messages are saved only in your browser.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C12 2 5 11.5 5 15.5C5 19.64 8.13 22 12 22C15.87 22 19 19.64 19 15.5C19 11.5 12 2 12 2Z' fill='%23D90429'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>We're here to help</h1>
+      <p class="lead" style="max-width:60ch">Demo form: messages are saved only in this browser. Nothing is emailed or sent to anyone.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container grid grid-2">
+      <form class="form-card" id="contactForm" novalidate>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" placeholder="Your name"><div class="error-msg"></div></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"><div class="error-msg"></div></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea><div class="error-msg"></div></div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+      <div>
+        <div class="card reveal" style="margin-bottom:1.2rem"><h3>In a real emergency</h3>
+          <p class="mb-0">India emergency number: <strong><a href="tel:112">112</a></strong></p>
+          <p class="mb-0">Ambulance: <strong><a href="tel:102">102</a> / <a href="tel:108">108</a></strong></p>
+          <p class="muted mb-0" style="margin-top:0.5rem">This demo site is not connected to any emergency service.</p></div>
+        <div class="card reveal" style="margin-bottom:1.2rem"><h3>Sample address (fictional)</h3>
+          <p class="mb-0">Sector 34, Chandigarh, India</p><p class="mb-0">Mon–Sat, 9:00 AM – 6:00 PM</p></div>
+        <div class="card reveal"><h3>Follow us</h3>
+          <p class="muted">Placeholder links — this demo has no social accounts.</p>
+          <div class="flex gap-sm" style="flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-ghost btn-sm">Instagram</a><a href="contact.html" class="btn btn-ghost btn-sm">X / Twitter</a><a href="contact.html" class="btn btn-ghost btn-sm">LinkedIn</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="js/pages/contact.js"></script>
+</body>
+</html>
