@@ -45,3 +45,5 @@ Camps register/cancel with seat counts and "full" rejection · Compatibility exp
 Gallery filter · Contact (saved locally) · Dashboard charts, availability toggle, reset demo data · Dark mode · Login/signup/logout.
 
 Demo login: `demo@sanguine.app` / `demo1234`.
+
+link : https://sanguin-e.netlify.app/
