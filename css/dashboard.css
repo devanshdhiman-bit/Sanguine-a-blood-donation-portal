@@ -1,0 +1,27 @@
+/* Additional patterns specific to the admin/impact dashboard */
+
+.dash-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: var(--space-lg); }
+
+.bar-chart { display: flex; align-items: flex-end; gap: 0.8rem; height: 180px; margin-top: var(--space-md); }
+.bar-chart .bar { flex: 1; border-radius: 8px 8px 0 0; background: var(--gradient-pulse); position: relative; height: 0; transition: height 900ms var(--ease); }
+.bar-chart .bar span { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 0.75rem; font-weight: 700; }
+.bar-labels { display: flex; gap: 0.8rem; margin-top: 0.5rem; }
+.bar-labels span { flex: 1; text-align: center; font-size: 0.75rem; color: var(--color-ink-soft); }
+
+.donut-wrap { display: grid; place-items: center; position: relative; }
+.donut-wrap .center-label { position: absolute; text-align: center; }
+.donut-wrap .center-label b { display: block; font-family: var(--font-display); font-size: 1.4rem; }
+
+.dash-table { width: 100%; border-collapse: collapse; }
+.dash-table th, .dash-table td { padding: 0.7rem 0.5rem; text-align: left; border-bottom: 1px solid var(--color-line); font-size: 0.88rem; }
+.dash-table th { color: var(--color-ink-soft); font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
+
+/* Sub-navigation bar of the React pages (app.html) — NavLink adds aria-current="page". */
+.app-subnav { border-bottom: 1px solid var(--color-line); background: transparent; }
+.app-subnav .container { display: flex; gap: 0.4rem; flex-wrap: wrap; padding-block: 0.6rem; }
+.app-subnav a {
+  padding: 0.4rem 0.9rem; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+  color: var(--color-ink-soft); text-decoration: none;
+}
+.app-subnav a:hover { background: var(--color-primary-soft, rgba(217, 4, 41, 0.08)); }
+.app-subnav a[aria-current="page"] { background: var(--color-primary); color: #fff; }

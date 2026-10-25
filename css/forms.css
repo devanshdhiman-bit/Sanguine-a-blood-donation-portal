@@ -1,0 +1,41 @@
+/* Extra form patterns layered on top of the base .field styles in style.css */
+
+.bg-picker { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.bg-picker input { display: none; }
+.bg-picker label {
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-line);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.bg-picker input:checked + label {
+  background: var(--gradient-pulse);
+  border-color: transparent;
+  color: #fff;
+}
+
+.filter-bar { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: end; margin-bottom: var(--space-lg); }
+.filter-bar .field { margin-bottom: 0; flex: 1 1 180px; }
+.filter-bar .field-checkbox { display: flex; align-items: center; padding-bottom: 0.75rem; }
+@media (max-width: 620px) {
+  .filter-bar { align-items: stretch; }
+  .filter-bar .field-checkbox { padding-bottom: 0; padding-top: 0.25rem; }
+}
+
+.urgency-picker { display: flex; gap: 0.6rem; }
+.urgency-picker label {
+  flex: 1; text-align: center; padding: 0.6rem; border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-line); cursor: pointer; font-size: 0.85rem; font-weight: 600;
+}
+.urgency-picker input { display: none; }
+.urgency-picker input:checked + label { border-color: var(--color-primary); background: rgba(217,4,41,0.08); color: var(--color-primary); }
+
+.checkbox-row { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; color: var(--color-ink-soft); }
+.checkbox-row input { width: 16px; height: 16px; }
+
+.strength-meter { display: flex; gap: 4px; margin-top: 0.4rem; }
+.strength-meter span { height: 4px; flex: 1; border-radius: 99px; background: var(--color-line); }
+.strength-meter span.on { background: var(--color-primary); }

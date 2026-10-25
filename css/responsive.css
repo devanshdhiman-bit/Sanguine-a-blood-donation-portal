@@ -1,0 +1,91 @@
+/* ==========================================================================
+   responsive.css — Fine-grained, mobile-first breakpoint tuning.
+   Component-level rules already live next to their components in style.css;
+   this file layers additional adjustments across the full device range:
+   320 / 375 / 390 / 430 / 768 / 820 / 1024 / 1280 / 1440 / 1920.
+   ========================================================================== */
+
+/* ---- Base mobile (up to 480px): 320 / 375 / 390 / 430 ---- */
+@media (max-width: 480px) {
+  .container { width: 92%; }
+
+  h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 1.8rem); }
+
+  .btn { padding: 0.75rem 1.3rem; font-size: 0.88rem; }
+  .btn-block, .form-card .btn { width: 100%; }
+
+  .hero { padding: var(--space-lg) 0 var(--space-md); text-align: left; }
+  .hero-grid { gap: var(--space-md); }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { width: 100%; text-align: center; }
+  .hero-stats { gap: var(--space-md) var(--space-lg); }
+  .drop-scene svg { max-width: 220px; }
+
+  .section { padding: var(--space-lg) 0; }
+  .section-header { margin-bottom: var(--space-md); }
+
+  .form-card { padding: var(--space-md); }
+  .field input, .field select, .field textarea { font-size: 16px; } /* avoid iOS zoom-on-focus */
+
+  .emergency-bar .container { flex-direction: column; align-items: flex-start; padding: 0.75rem 0; }
+  .emergency-bar span { font-size: 0.85rem; }
+  .emergency-bar a.btn { width: 100%; text-align: center; }
+
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-bar .field { flex: 1 1 auto; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-md); text-align: left; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .dash-toolbar { align-items: flex-start; }
+  .bar-chart { gap: 0.4rem; height: 140px; }
+  .bar-chart .bar span { font-size: 0.68rem; top: -18px; }
+  .bar-labels span { font-size: 0.66rem; }
+
+  .cta-band { padding: var(--space-md); }
+
+  table.compat th, table.compat td { padding: 0.65rem 0.6rem; font-size: 0.82rem; }
+}
+
+/* ---- Small phones only: fine-tune under 340px (iPhone SE etc.) ---- */
+@media (max-width: 340px) {
+  .brand { font-size: 1rem; }
+  .brand svg { width: 22px; height: 22px; }
+  .hero-stats { gap: 0.9rem 1.4rem; }
+  .btn-sm { padding: 0.45rem 0.85rem; font-size: 0.8rem; }
+}
+
+/* ---- Large phones / small tablets: 768 / 820 ---- */
+@media (min-width: 481px) and (max-width: 860px) {
+  .hero-cta { flex-wrap: wrap; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- Desktop refinements: 1280 / 1440 ---- */
+@media (min-width: 1400px) {
+  .container { width: min(1320px, 90%); }
+}
+
+/* ---- Large desktop: 1920 and up ---- */
+@media (min-width: 1800px) {
+  .container { width: min(1500px, 82%); }
+  h1 { font-size: clamp(3rem, 3.4vw, 4.5rem); }
+}
+
+/* ---- Landscape phones: avoid overly tall hero/page-hero sections ---- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { padding: var(--space-md) 0; }
+  .page-hero { padding: var(--space-md) 0; }
+}
+
+/* ---- Guard against any accidental horizontal overflow ---- */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, table { max-width: 100%; }
+.gallery-item .ph { font-size: clamp(0.7rem, 3vw, 0.9rem); text-align: center; padding: 0.5rem; }
+
+@media print {
+  .site-header, .site-footer, .emergency-bar, #toast-root, #loading-screen, .skip-link { display: none !important; }
+}
