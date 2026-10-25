@@ -45,34 +45,3 @@ Camps register/cancel with seat counts and "full" rejection · Compatibility exp
 Gallery filter · Contact (saved locally) · Dashboard charts, availability toggle, reset demo data · Dark mode · Login/signup/logout.
 
 Demo login: `demo@sanguine.app` / `demo1234`.
-
-## Run
-```bash
-npm install
-npm run dev        # http://localhost:5173/index.html
-npm run build      # multi-page production build in dist/
-npm run preview    # serve dist/ on http://localhost:4173
-npm test           # Vitest: 64 tests (jsdom)
-```
-Pages use ES modules, so open them through a server (`dev`/`preview`/any static host), not by double-clicking the file.
-
-Optional real-browser check (Playwright for Python, needs a one-off `playwright install chromium`):
-```bash
-npm run build && npx vite preview --port 4173 &
-python tests/e2e/e2e.py
-```
-
-## Structure
-```
-*.html            one page each (app.html hosts React)        css/        shared stylesheets
-js/shell.js       shared header/footer/dark mode/toasts       js/ui.js    html`` escaping, bindForm, countUp
-js/lib/           storage.js · api.js (Promises) · validation.js · nav.js   (framework-free, shared)
-js/pages/         one vanilla module per page
-src/              React app: main, App (routes), context, store/, pages/{Auth,Request,Dashboard}, lib/hooks, components/
-tests/vanilla/    jsdom tests for js/**      src/test/   React + Redux tests      tests/e2e/  Playwright script
-```
-localStorage keys: `bc_donors`, `bc_requests`, `bc_camps`, `bc_banks`, `bc_users`, `bc_current_user`, `bc_prefs`, `bc_my_camps`, `bc_messages`.
-
-## Known limitations
-No backend, notifications or real authentication; sample data only. The start-up splash screen from the earlier React version was dropped
-(it would replay on every page navigation). `package.json` was changed to `vite ^7` because the previous `vite ^8` conflicted with `@vitejs/plugin-react@4` and `npm install` failed.
